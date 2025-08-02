@@ -3,53 +3,29 @@ import { Download, Star } from "lucide-react";
 
 const GameCatalog = () => {
   const games = [
-    // Popular Battle Royales
-    { name: "Fortnite", category: "Battle Royale", rating: 4.5, color: "from-purple-500 to-blue-500" },
-    { name: "Apex Legends", category: "Battle Royale", rating: 4.7, color: "from-orange-500 to-red-500" },
-    { name: "PUBG", category: "Battle Royale", rating: 4.3, color: "from-yellow-500 to-orange-500" },
-    
-    // FPS Games
-    { name: "Valorant", category: "FPS", rating: 4.8, color: "from-pink-500 to-purple-500" },
-    { name: "CS2", category: "FPS", rating: 4.6, color: "from-blue-500 to-cyan-500" },
-    { name: "Call of Duty", category: "FPS", rating: 4.4, color: "from-green-500 to-blue-500" },
-    
-    // MOBAs
-    { name: "League of Legends", category: "MOBA", rating: 4.5, color: "from-blue-600 to-purple-600" },
-    { name: "Dota 2", category: "MOBA", rating: 4.4, color: "from-red-500 to-orange-500" },
-    
-    // MMORPGs
-    { name: "World of Warcraft", category: "MMORPG", rating: 4.3, color: "from-blue-500 to-green-500" },
-    { name: "Lost Ark", category: "MMORPG", rating: 4.2, color: "from-yellow-500 to-red-500" },
-    { name: "Final Fantasy XIV", category: "MMORPG", rating: 4.6, color: "from-purple-500 to-pink-500" },
-    
-    // Racing
-    { name: "Gran Turismo 7", category: "Racing", rating: 4.4, color: "from-red-500 to-yellow-500" },
-    { name: "Forza Horizon 5", category: "Racing", rating: 4.7, color: "from-orange-500 to-pink-500" },
-    
-    // Sports
-    { name: "EA FC 24", category: "Sports", rating: 4.2, color: "from-green-500 to-blue-500" },
-    { name: "NBA 2K24", category: "Sports", rating: 4.1, color: "from-orange-500 to-red-500" },
-    
-    // Adventure/RPG
-    { name: "Cyberpunk 2077", category: "RPG", rating: 4.5, color: "from-cyan-500 to-purple-500" },
-    { name: "The Witcher 3", category: "RPG", rating: 4.8, color: "from-gray-500 to-red-500" },
-    { name: "Elden Ring", category: "RPG", rating: 4.7, color: "from-yellow-600 to-orange-600" },
-    
-    // Indie/Popular
-    { name: "Minecraft", category: "Sandbox", rating: 4.6, color: "from-green-400 to-blue-400" },
-    { name: "Among Us", category: "Party", rating: 4.3, color: "from-red-500 to-blue-500" },
-    { name: "Fall Guys", category: "Party", rating: 4.2, color: "from-pink-500 to-yellow-500" },
-    
-    // Simulation
-    { name: "Cities Skylines", category: "Simulation", rating: 4.4, color: "from-blue-500 to-green-500" },
-    { name: "Euro Truck Simulator", category: "Simulation", rating: 4.3, color: "from-blue-600 to-gray-600" },
-    
-    // Fighting
-    { name: "Street Fighter 6", category: "Fighting", rating: 4.5, color: "from-red-500 to-blue-500" },
-    { name: "Tekken 8", category: "Fighting", rating: 4.6, color: "from-purple-500 to-red-500" }
+    { name: "Valorant", category: "FPS", rating: 4.8, color: "from-red-500 to-pink-500" },
+    { name: "Call of Duty Warzone", category: "Battle Royale", rating: 4.6, color: "from-green-500 to-blue-500" },
+    { name: "Call of Duty Mobile", category: "Mobile", rating: 4.4, color: "from-orange-500 to-red-500" },
+    { name: "Free Fire", category: "Battle Royale", rating: 4.2, color: "from-orange-400 to-red-400" },
+    { name: "Minecraft", category: "Sandbox", rating: 4.8, color: "from-green-400 to-blue-400" },
+    { name: "Roblox", category: "Platform", rating: 4.5, color: "from-blue-400 to-purple-400" },
+    { name: "Terraria", category: "Adventure", rating: 4.7, color: "from-green-500 to-teal-500" },
+    { name: "Hollow Knight", category: "Metroidvania", rating: 4.9, color: "from-purple-600 to-indigo-600" },
+    { name: "Half Life", category: "FPS", rating: 4.8, color: "from-orange-500 to-amber-500" },
+    { name: "Counter Strike 1.6", category: "FPS", rating: 4.7, color: "from-blue-500 to-cyan-500" },
+    { name: "Team Fortress Classic", category: "FPS", rating: 4.3, color: "from-red-500 to-orange-500" },
+    { name: "Broforce", category: "Action", rating: 4.5, color: "from-red-600 to-pink-600" },
+    { name: "Castle Crashers", category: "Beat 'em up", rating: 4.6, color: "from-yellow-500 to-orange-500" },
+    { name: "Left 4 Dead 2", category: "Survival", rating: 4.7, color: "from-red-500 to-gray-500" },
+    { name: "Fortnite", category: "Battle Royale", rating: 4.5, color: "from-blue-400 to-purple-400" },
+    { name: "League of Legends", category: "MOBA", rating: 4.6, color: "from-blue-600 to-purple-600" },
+    { name: "Red Dead Redemption", category: "Action", rating: 4.8, color: "from-red-600 to-orange-600" },
+    { name: "CupHead", category: "Run & Gun", rating: 4.7, color: "from-yellow-400 to-red-400" },
+    { name: "Deathmatch Classic", category: "FPS", rating: 4.2, color: "from-gray-500 to-red-500" },
+    { name: "Ricochet", category: "FPS", rating: 4.0, color: "from-cyan-500 to-blue-500" }
   ];
 
-  const categories = ["Todos", "Battle Royale", "FPS", "MOBA", "MMORPG", "Racing", "Sports", "RPG"];
+  const categories = ["Todos", "FPS", "Battle Royale", "MOBA", "Action", "Adventure", "Sandbox"];
 
   return (
     <section id="juegos" className="py-20 bg-background">
@@ -119,11 +95,11 @@ const GameCatalog = () => {
         <div className="text-center bg-card border border-primary/20 rounded-2xl p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="text-3xl font-bold text-secondary mb-2">100+</div>
+              <div className="text-3xl font-bold text-secondary mb-2">20+</div>
               <div className="text-sm text-muted-foreground">Juegos Instalados</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-accent mb-2">50+</div>
+              <div className="text-3xl font-bold text-accent mb-2">10+</div>
               <div className="text-sm text-muted-foreground">Juegos Nuevos</div>
             </div>
             <div>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.jpg";
+import viltrumLogo from "@/assets/viltrum-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +21,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src={logo} 
+              src={viltrumLogo} 
               alt="Viltrum Zone Logo" 
-              className="w-12 h-12 rounded-full border-2 border-primary shadow-neon-primary"
+              className="w-12 h-12 rounded-full"
             />
             <span className="font-gaming font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
               Viltrum Zone

@@ -48,21 +48,21 @@ const Contact = () => {
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      url: "https://wa.me/593999999999",
+      url: "https://chat.whatsapp.com/JklcE8QAg7E68PJcciAiGa",
       color: "text-green-400",
       bgColor: "bg-green-400/10 border-green-400/30"
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/viltrumzone",
+      url: "https://www.instagram.com/viltrum.zone",
       color: "text-accent-pink",
       bgColor: "bg-accent-pink/10 border-accent-pink/30"
     },
     {
       name: "TikTok",
       icon: Send,
-      url: "https://tiktok.com/@viltrumzone", 
+      url: "https://www.tiktok.com/@viltrum.zone", 
       color: "text-foreground",
       bgColor: "bg-foreground/10 border-foreground/30"
     }
@@ -111,8 +111,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Teléfono</h4>
                     <p className="text-muted-foreground">
-                      <a href="tel:+593999999999" className="hover:text-accent transition-colors">
-                        +593 99 999 9999
+                      <a href="tel:+584121156707" className="hover:text-accent transition-colors">
+                        +584121156707
                       </a>
                     </p>
                   </div>
@@ -158,7 +158,9 @@ const Contact = () => {
                           {social.name}
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          @viltrumzone
+                          {social.name === "Instagram" ? "@viltrum.zone" : 
+                           social.name === "TikTok" ? "@viltrum.zone" : 
+                           "Grupo principal"}
                         </p>
                       </div>
                     </a>

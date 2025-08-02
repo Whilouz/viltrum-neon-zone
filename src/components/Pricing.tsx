@@ -55,6 +55,16 @@ const Pricing = () => {
     }
   ];
 
+  const additionalPricing = [
+    { hours: "3 Horas", price: "$3.50" },
+    { hours: "4 Horas", price: "$5.00" }
+  ];
+
+  const discountPacks = [
+    { hours: "8 Horas", price: "$10", discount: "38% descuento" },
+    { hours: "10 Horas", price: "$13", discount: "35% descuento" }
+  ];
+
   return (
     <section id="precios" className="py-20 bg-gradient-to-br from-card to-background">
       <div className="container mx-auto px-6">
@@ -134,6 +144,70 @@ const Pricing = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Extended Pricing Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+          {additionalPricing.map((plan, index) => (
+            <div 
+              key={index}
+              className="bg-card border border-primary/20 rounded-xl p-6 text-center hover:border-primary/50 transition-all duration-300"
+            >
+              <h3 className="text-xl font-bold mb-2 text-foreground">{plan.hours}</h3>
+              <div className="text-3xl font-gaming font-bold text-accent mb-4">{plan.price}</div>
+              <p className="text-muted-foreground">Ideal para sesiones largas</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Happy Hour */}
+        <div className="bg-gradient-to-r from-secondary/20 to-accent/20 border border-secondary/30 rounded-2xl p-8 mb-12 text-center max-w-3xl mx-auto">
+          <h3 className="text-2xl font-bold mb-4 text-foreground flex items-center justify-center">
+            <Zap className="w-8 h-8 text-secondary mr-3" />
+            Happy Hour
+          </h3>
+          <div className="text-4xl font-gaming font-bold text-secondary mb-4">$1.50/hora</div>
+          <p className="text-lg mb-4 text-foreground">
+            Entre 12:00 PM - 3:00 PM
+          </p>
+          <p className="text-accent font-semibold">
+            ⚡ Válido solo lunes y miércoles
+          </p>
+        </div>
+
+        {/* Discount Packs */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
+            Packs con Descuento
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {discountPacks.map((pack, index) => (
+              <div 
+                key={index}
+                className="bg-card border-2 border-accent/30 rounded-xl p-6 text-center hover:border-accent/50 transition-all duration-300 shadow-neon-accent/20"
+              >
+                <h4 className="text-xl font-bold mb-2 text-foreground">{pack.hours}</h4>
+                <div className="text-3xl font-gaming font-bold text-accent mb-2">{pack.price}</div>
+                <div className="text-sm text-accent font-semibold bg-accent/20 rounded-full px-3 py-1 inline-block">
+                  {pack.discount}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Loyalty Program */}
+        <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-2xl p-8 mb-12 text-center max-w-2xl mx-auto">
+          <h3 className="text-xl font-bold mb-4 text-foreground flex items-center justify-center">
+            <Star className="w-6 h-6 text-secondary mr-3" />
+            Programa de Lealtad
+          </h3>
+          <p className="text-lg text-foreground mb-4">
+            🎉 <strong>Cada 5 horas, 1 gratis</strong>
+          </p>
+          <p className="text-muted-foreground">
+            Acumula horas y obtén tiempo de juego gratuito
+          </p>
         </div>
 
         {/* Additional Info */}

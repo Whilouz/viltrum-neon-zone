@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, MessageCircle, Instagram, Send, Gamepad2, Zap } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import viltrumLogo from "@/assets/viltrum-logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -12,9 +12,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "WhatsApp", icon: MessageCircle, href: "https://wa.me/593999999999", color: "hover:text-green-400" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/viltrumzone", color: "hover:text-accent-pink" },
-    { name: "TikTok", icon: Send, href: "https://tiktok.com/@viltrumzone", color: "hover:text-foreground" }
+    { name: "WhatsApp", icon: MessageCircle, href: "https://chat.whatsapp.com/JklcE8QAg7E68PJcciAiGa", color: "hover:text-green-400" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/viltrum.zone", color: "hover:text-accent-pink" },
+    { name: "TikTok", icon: Send, href: "https://www.tiktok.com/@viltrum.zone", color: "hover:text-foreground" }
   ];
 
   return (
@@ -25,9 +25,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src={logo} 
+                src={viltrumLogo} 
                 alt="Viltrum Zone Logo" 
-                className="w-12 h-12 rounded-full border-2 border-primary shadow-neon-primary"
+                className="w-12 h-12 rounded-full"
               />
               <span className="font-gaming font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
                 Viltrum Zone
@@ -86,10 +86,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-muted-foreground" />
                 <a 
-                  href="tel:+593999999999" 
+                  href="tel:+584121156707" 
                   className="text-muted-foreground hover:text-accent transition-colors"
                 >
-                  +593 99 999 9999
+                  +584121156707
                 </a>
               </div>
               

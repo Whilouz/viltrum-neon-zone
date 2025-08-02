@@ -4,35 +4,35 @@ import tournamentBg from "@/assets/tournament.jpg";
 
 const Tournaments = () => {
   const popularGames = [
-    { name: "Fortnite", players: "50+", prize: "$500" },
-    { name: "Valorant", players: "32", prize: "$400" },
-    { name: "League of Legends", players: "20", prize: "$600" },
-    { name: "CS2", players: "16", prize: "$350" }
+    { name: "FIFA", players: "10-20", prize: "Dinero/Skins" },
+    { name: "Valorant", players: "5v5/1v1", prize: "Skins/RP/Efectivo" },
+    { name: "League of Legends", players: "5v5/1v1", prize: "Skins/RP/Efectivo" },
+    { name: "Fortnite", players: "10+", prize: "Pavos/Efectivo" }
   ];
 
   const upcomingTournaments = [
     {
-      game: "Fortnite Battle Royale",
+      game: "FIFA Tournament",
       date: "Sábado 3 Feb",
       time: "7:00 PM",
-      prize: "$500",
-      participants: "48/50",
-      status: "Casi lleno"
+      prize: "$10+",
+      participants: "8/20",
+      status: "Abierto"
     },
     {
-      game: "Valorant Competitive",
+      game: "Valorant 5v5",
       date: "Domingo 4 Feb", 
-      time: "6:00 PM",
-      prize: "$400",
-      participants: "24/32",
+      time: "7:00 PM",
+      prize: "$10+",
+      participants: "6/10",
       status: "Abierto"
     },
     {
       game: "League of Legends",
       date: "Sábado 10 Feb",
-      time: "5:00 PM", 
-      prize: "$600",
-      participants: "16/20",
+      time: "7:00 PM", 
+      prize: "$10+",
+      participants: "4/10",
       status: "Abierto"
     }
   ];
@@ -80,27 +80,33 @@ const Tournaments = () => {
                 Torneos Semanales
               </h3>
               
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Todos los sábados a las 7:00 PM. Inscripciones abiertas toda la semana.
+              <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Sábados y domingos a las 7:00 PM. Inscripciones abiertas toda la semana.
                 ¡Demuestra tus habilidades y gana increíbles premios!
               </p>
+              
+              <div className="bg-accent/20 border border-accent/30 rounded-xl p-4 mb-8 max-w-md mx-auto">
+                <p className="text-accent font-semibold text-center">
+                  💰 Inscripción: $2 (Incluye bebida y snacks)
+                </p>
+              </div>
 
               {/* Tournament Info Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="text-center">
                   <Calendar className="w-8 h-8 text-accent mx-auto mb-2" />
-                  <div className="text-lg font-bold text-foreground">Sábados</div>
+                  <div className="text-lg font-bold text-foreground">Sáb/Dom</div>
                   <div className="text-sm text-muted-foreground">7:00 PM</div>
                 </div>
                 <div className="text-center">
                   <Users className="w-8 h-8 text-accent-pink mx-auto mb-2" />
-                  <div className="text-lg font-bold text-foreground">50+</div>
+                  <div className="text-lg font-bold text-foreground">10+</div>
                   <div className="text-sm text-muted-foreground">Participantes</div>
                 </div>
                 <div className="text-center">
                   <Gift className="w-8 h-8 text-secondary mx-auto mb-2" />
-                  <div className="text-lg font-bold text-foreground">$600</div>
-                  <div className="text-sm text-muted-foreground">Premio Max</div>
+                  <div className="text-lg font-bold text-foreground">$10+</div>
+                  <div className="text-sm text-muted-foreground">Premio</div>
                 </div>
                 <div className="text-center">
                   <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />

@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Zap, GamepadIcon, Users } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import viltrumBanner from "@/assets/viltrum-banner.png";
 
 const Hero = () => {
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(30, 27, 75, 0.8), rgba(30, 27, 75, 0.9)), url(${heroBg})`,
+        backgroundImage: `linear-gradient(rgba(30, 27, 75, 0.7), rgba(30, 27, 75, 0.8)), url(${viltrumBanner})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
