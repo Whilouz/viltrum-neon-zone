@@ -1,29 +1,32 @@
 import { Gamepad2, Wifi, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import gamingSetup from "@/assets/gaming-setup.jpg";
+import { useAdminConfig } from "@/hooks/useAdminConfig";
 
 const Services = () => {
+  const { config } = useAdminConfig();
+  
   const services = [
     {
       icon: Gamepad2,
-      title: "Gaming Zone",
-      description: "Estaciones gaming profesionales con hardware de última generación, periféricos premium y ambiente competitivo",
+      title: config.services[0]?.title || "Gaming Zone",
+      description: config.services[0]?.description || "Estaciones gaming profesionales con hardware de última generación, periféricos premium y ambiente competitivo",
       features: ["RTX 4080 & Intel i7", "Monitores 144Hz", "Teclados mecánicos", "Auriculares gaming"],
       color: "accent-cyan",
       bgGradient: "from-accent/20 to-accent-cyan/20"
     },
     {
       icon: Wifi,
-      title: "Internet & Trabajo",
-      description: "Área de trabajo remoto con conexión ultra rápida, espacios cómodos y ambiente productivo",
+      title: config.services[1]?.title || "Internet & Trabajo",
+      description: config.services[1]?.description || "Área de trabajo remoto con conexión ultra rápida, espacios cómodos y ambiente productivo",
       features: ["1000 Mbps Fibra", "Espacios silenciosos", "Impresión disponible", "Café gratis"],
       color: "accent-pink",
       bgGradient: "from-accent-pink/20 to-primary/20"
     },
     {
       icon: Printer,
-      title: "Servicios Digitales",
-      description: "Impresión, escaneo, copias y servicios digitales para estudiantes y profesionales",
+      title: config.services[2]?.title || "Servicios Digitales",
+      description: config.services[2]?.description || "Impresión, escaneo, copias y servicios digitales para estudiantes y profesionales",
       features: ["Impresión a color", "Escaneo HD", "Plastificado", "Anillado"],
       color: "secondary",
       bgGradient: "from-secondary/20 to-accent/20"

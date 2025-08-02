@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import viltrumLogo from "@/assets/viltrum-logo.png";
+import { useAdminConfig } from "@/hooks/useAdminConfig";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { config } = useAdminConfig();
 
   const navItems = [
     { name: "Servicios", href: "#servicios" },
@@ -21,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src={viltrumLogo} 
+              src={config.siteConfig.logoUrl || viltrumLogo} 
               alt="Viltrum Zone Logo" 
               className="w-12 h-12 rounded-full"
             />

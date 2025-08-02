@@ -8,6 +8,7 @@ import Tournaments from "@/components/Tournaments";
 import BookingForm from "@/components/BookingForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AdminFloatingButton from "@/components/AdminFloatingButton";
 
 const ViltrumZone = () => {
   return (
@@ -24,6 +25,7 @@ const ViltrumZone = () => {
         <Contact />
       </main>
       <Footer />
+      <AdminFloatingButton />
     </div>
   );
 };

@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Clock, MessageCircle, Instagram, Send, Gamepad2, Zap } from "lucide-react";
 import viltrumLogo from "@/assets/viltrum-logo.png";
+import { useAdminConfig } from "@/hooks/useAdminConfig";
 
 const Footer = () => {
+  const { config } = useAdminConfig();
+  
   const quickLinks = [
     { name: "Servicios", href: "#servicios" },
     { name: "Precios", href: "#precios" },
@@ -25,7 +28,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src={viltrumLogo} 
+                src={config.siteConfig.logoUrl || viltrumLogo} 
                 alt="Viltrum Zone Logo" 
                 className="w-12 h-12 rounded-full"
               />

@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Zap, GamepadIcon, Users } from "lucide-react";
 import viltrumBanner from "@/assets/viltrum-banner.png";
+import { useAdminConfig } from "@/hooks/useAdminConfig";
 
 const Hero = () => {
+  const { config } = useAdminConfig();
+  
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(rgba(30, 27, 75, 0.7), rgba(30, 27, 75, 0.8)), url(${viltrumBanner})`,
+        backgroundImage: `linear-gradient(rgba(30, 27, 75, 0.7), rgba(30, 27, 75, 0.8)), url(${config.siteConfig.bannerUrl || viltrumBanner})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

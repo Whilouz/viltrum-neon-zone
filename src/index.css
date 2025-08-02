@@ -77,7 +77,20 @@ All colors MUST be HSL for consistency and theming support.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
 
   .dark {
     --background: 222.2 84% 4.9%;
